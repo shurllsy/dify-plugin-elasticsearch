@@ -1,0 +1,44 @@
+identity:
+  author: quicksandzn
+  name: elasticsearch
+  label:
+    en_US: Elasticsearch
+    zh_Hans: Elasticsearch
+    pt_BR: Elasticsearch
+  description:
+    en_US: Elasticsearch
+    zh_Hans: Elasticsearch
+    pt_BR: Elasticsearch
+  icon: icon.svg
+credentials_for_provider:
+  endpoint:
+    type: text-input
+    required: true
+    label:
+      en_US: Endpoint
+      zh_Hans: Endpoint
+    placeholder:
+      en_US: Please input your endpoint
+      zh_Hans: 请输入你的 endpoint
+    help:
+      en_US: Get your endpoint from elasticsearch
+      zh_Hans: 从 elasticsearch 获取您的 endpoint
+    url: https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/getting-started-python.html
+  api_key:
+    type: secret-input
+    required: false
+    label:
+      en_US: Api Key
+      zh_Hans: Api Key
+    placeholder:
+      en_US: Please input your api key
+      zh_Hans: 请输入你的 api key
+    help:
+      en_US: Get your api key from elasticsearch
+      zh_Hans: 从 elasticsearch 获取您的 api key
+    url: https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/getting-started-python.html
+tools:
+  - tools/query.yaml
+extra:
+  python:
+    source: provider/es.py
