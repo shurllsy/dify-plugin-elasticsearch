@@ -1,6 +1,6 @@
 version: 0.0.1
 type: plugin
-author: quicksandznzn
+author: quicksandzn
 name: elasticsearch
 label:
   en_US: Elasticsearch
