@@ -1,7 +1,7 @@
 ## Elasticsearch
 
 **Author:** [quicksandzn](https://github.com/quicksandznzn)
-**Version:** 0.0.1
+**Version:** 0.0.2
 **Type:** tool
 
 ### Description
@@ -14,7 +14,10 @@ This plugin is used to search for data in Elasticsearch.
 
 ![img.png](_assets/img.png)
 
-- Example
+- Query Example
 
 ![img.png](_assets/img-2.png)
 
+- Create Example:
+
+![img.png](_assets/img-3.png)
