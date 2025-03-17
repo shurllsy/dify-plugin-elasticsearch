@@ -1,7 +1,8 @@
 from typing import Any
 from dify_plugin import ToolProvider
 from dify_plugin.errors.tool import ToolProviderCredentialValidationError
-from tools.query import ElasticsearchQueryTool
+
+from tools.base import ElasticsearchBaseTool
 
 
 class ElasticsearchProvider(ToolProvider):
@@ -10,8 +11,6 @@ class ElasticsearchProvider(ToolProvider):
             """
             IMPLEMENT YOUR VALIDATION HERE
             """
-            tools = ElasticsearchQueryTool.from_credentials(credentials=credentials)
-            for response in tools.invoke(tool_parameters={"index": None}):
-                pass
+            ElasticsearchBaseTool.auth(credentials=credentials)
         except Exception as e:
             raise ToolProviderCredentialValidationError(str(e))

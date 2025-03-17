@@ -39,6 +39,7 @@ credentials_for_provider:
     url: https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/getting-started-python.html
 tools:
   - tools/query.yaml
+  - tools/create.yaml
 extra:
   python:
     source: provider/es.py
