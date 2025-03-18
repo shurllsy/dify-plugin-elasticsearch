@@ -11,6 +11,6 @@ class ElasticsearchProvider(ToolProvider):
             """
             IMPLEMENT YOUR VALIDATION HERE
             """
-            ElasticsearchBaseTool.auth(credentials=credentials)
+            ElasticsearchBaseTool().auth(credentials=credentials)
         except Exception as e:
             raise ToolProviderCredentialValidationError(str(e))

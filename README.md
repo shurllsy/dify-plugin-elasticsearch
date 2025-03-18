@@ -1,8 +1,9 @@
 ## Elasticsearch
 
-**Author:** [quicksandzn](https://github.com/quicksandznzn)
-**Version:** 0.0.2
-**Type:** tool
+- **Author:** [quicksandzn](https://github.com/quicksandznzn)
+- **Github:** https://github.com/quicksandznzn/dify-plugin-elasticsearch
+- **Version:** 0.0.3
+- **Type:** tool
 
 ### Description
 
@@ -12,7 +13,7 @@ This plugin is used to search for data in Elasticsearch.
 
 - Set Up Authorization
 
-![img.png](_assets/img.png)
+![img.png](_assets/img-4.png)
 
 - Query Example
 
