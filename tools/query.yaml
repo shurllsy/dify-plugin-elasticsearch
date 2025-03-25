@@ -34,6 +34,17 @@ parameters:
       zh_Hans: DSL 查询语句
     llm_description: Elasticsearch DSL Query
     form: llm
+  - name: source_includes
+    type: string
+    required: false
+    label:
+      en_US: Source Fields
+      zh_Hans: 返回字段
+    human_description:
+      en_US: "Source Fields (default: *, multiple fields separated by commas)"
+      zh_Hans: "返回字段 (默认: 全部，多个字段以逗号分隔)"
+    llm_description: Elasticsearch Source
+    form: llm
   - name: from
     type: number
     required: false
