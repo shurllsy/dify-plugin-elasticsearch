@@ -15,7 +15,11 @@ class ElasticsearchQueryTool(Tool, ElasticsearchBaseTool):
         size = tool_parameters.get("size", 10)
         source_includes = tool_parameters.get("source_includes", "*")
         resp = client.search(
-            index=index, query=json.loads(query), from_=from_, size=size, source_includes=source_includes
+            index=index,
+            query=json.loads(query),
+            from_=from_,
+            size=size,
+            source_includes=source_includes,
         )
         result = []
         for hit in resp["hits"]["hits"]:
