@@ -13,7 +13,7 @@ This plugin is used to search for data in Elasticsearch.
 
 - Set Up Authorization
 
-![img.png](_assets/img-4.png)
+![img.png](_assets/img-5.png)
 
 - Query Example
 

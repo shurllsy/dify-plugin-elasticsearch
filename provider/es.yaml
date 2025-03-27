@@ -24,6 +24,13 @@ credentials_for_provider:
       en_US: Get your endpoint from elasticsearch
       zh_Hans: 从 elasticsearch 获取您的 endpoint
     url: https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/getting-started-python.html
+  verify_certs:
+    type: boolean
+    required: false
+    default: false
+    label:
+      en_US: Verify Certs
+      zh_Hans: 是否验证证书
   auth_method:
     type: select
     required: true
