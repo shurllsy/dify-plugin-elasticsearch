@@ -2,7 +2,7 @@
 
 - **Author:** [quicksandzn](https://github.com/quicksandznzn)
 - **Github:** https://github.com/quicksandznzn/dify-plugin-elasticsearch
-- **Version:** 0.0.4
+- **Version:** 0.0.5
 - **Type:** tool
 
 ### Description
