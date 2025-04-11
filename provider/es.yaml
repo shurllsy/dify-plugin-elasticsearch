@@ -1,6 +1,6 @@
 identity:
-  author: quicksandzn
-  name: elasticsearch
+  author: shurllsy
+  name: elasticsearch-v2
   label:
     en_US: Elasticsearch
     zh_Hans: Elasticsearch

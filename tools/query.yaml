@@ -1,6 +1,6 @@
 identity:
   name: search
-  author: quicksandzn
+  author: shurllsy
   label:
     en_US: Elasticsearch Query
     zh_Hans: Elasticsearch Query
@@ -23,9 +23,20 @@ parameters:
       pt_BR: index name
     llm_description: index name
     form: llm
+  - name: body
+    type: string
+    required: false
+    label:
+      en_US: DSL BODY
+      zh_Hans: DSL BODY
+    human_description:
+      en_US: DSL 完整Body
+      zh_Hans: DSL 完整Body
+    llm_description: Elasticsearch DSL 整个body，client.search(body=body), body和其他参数二选一，body优先
+    form: llm
   - name: query
     type: string
-    required: true
+    required: false
     label:
       en_US: DSL Query
       zh_Hans: DSL 查询语句

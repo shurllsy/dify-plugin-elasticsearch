@@ -10,19 +10,27 @@ class ElasticsearchQueryTool(Tool, ElasticsearchBaseTool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
         client = self.from_credential(credentials=self.runtime.credentials)
         index = tool_parameters.get("index")
-        query = tool_parameters.get("query")
-        from_ = tool_parameters.get("from", 0)
-        size = tool_parameters.get("size", 10)
-        source_includes = tool_parameters.get("source_includes", "*")
-        resp = client.search(
-            index=index,
-            query=json.loads(query),
-            from_=from_,
-            size=size,
-            source_includes=source_includes,
-        )
+        body = tool_parameters.get("body", "")
+        if body != "":
+            body = json.loads(body)
+            resp = client.search(
+                index=index,
+                body=body
+            )
+        else:
+            query = tool_parameters.get("query", "")
+            from_ = tool_parameters.get("from", 0)
+            size = tool_parameters.get("size", 10)
+            source_includes = tool_parameters.get("source_includes", "*")
+            resp = client.search(
+                index=index,
+                query=json.loads(query),
+                from_=from_,
+                size=size,
+                source_includes=source_includes
+            )
         result = []
         for hit in resp["hits"]["hits"]:
             result.append(hit["_source"])
-        yield self.create_text_message(json.dumps(result))
+        yield self.create_text_message(json.dumps(result, ensure_ascii=False))
         yield self.create_json_message({"result": result})
